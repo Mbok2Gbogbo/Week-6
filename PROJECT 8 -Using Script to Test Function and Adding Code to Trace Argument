@@ -1,0 +1,20 @@
+def printAll(seq, level=0):
+    print(f"Level {level}: {seq}")
+    if seq:
+        print(seq[0])
+        printAll(seq[1:], level+1)
+
+seq = [1, 2, 3, 4, 5]
+printAll(seq)
+
+
+
+The printAll function works as expected,
+because it prints each element on a new line,
+and stops when the sequence becomes empty.
+
+
+There is a hidden cost in running this function,
+due to the fact that it is a recursive function.
+A lot of memory is required for this function for
+the creation of new stack frames.
