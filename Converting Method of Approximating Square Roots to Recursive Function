@@ -1,0 +1,9 @@
+def newton(x, estimate, tolerance=0.000001):
+    difference = abs(x - estimate ** 2)
+    if difference <= tolerance:
+        return estimate
+    else:
+        next_estimate = (estimate + x / estimate) / 2
+        return newton(x, next_estimate, tolerance)
+
+
